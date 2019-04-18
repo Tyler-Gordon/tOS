@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "fb.h"
-
-void write(char *s,int line, ...)
+int line = 0;
+void write(char *s, ...)
 {
     int cursor_pos = 0;
     char *p;
@@ -16,5 +16,6 @@ void write(char *s,int line, ...)
         }       
         cursor_pos++;
     }
+    line++;
 }
 
